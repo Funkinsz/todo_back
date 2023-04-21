@@ -7,13 +7,13 @@ const http = require("http")
 const server = http.createServer(app)
 
 const cors = require("cors")
-const port = 8000
+// const port = 8000
 
 const connection = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "",
-    database: "todolist"
+    host: "sql8.freemysqlhosting.net",
+    user: "sql8613828",
+    password: "VIL8nmGi3t",
+    database: "sql8613828"
 })
 
 connection.connect(err => {
@@ -101,6 +101,6 @@ app.post('/deleteTodo', (req, res) => {
 })
 
 //
-app.listen(port, () => {
-    console.log(`Serveur NodeJS écoutant sur le port ${port}`);
-})
+// app.listen(port, () => {
+//     console.log(`Serveur NodeJS écoutant sur le port ${port}`);
+// })
